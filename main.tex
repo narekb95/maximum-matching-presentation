@@ -1,0 +1,68 @@
+\documentclass[11pt]{beamer}
+
+%%%%%%%% tema e cor %%%%%%%%
+\mode<presentation> {
+\usetheme{Madrid}
+%\usecolortheme{albatross}
+}
+
+\input{config.tex}
+
+%%%%%%%% titulo e subtitulo %%%%%%%%
+\title[Maximum Cardinality Matching]{Maximum Cardinality Matching Problem} 
+
+%%%%%%%% nome dos autores %%%%%%%%
+\author [Bojikian, Witkowski, Vogel]{Narek Bojikian, Piotr Witkowski, Martin Vogel} 
+
+\begin{document}
+
+\begin{frame}
+\titlepage 
+\end{frame}
+
+%%%%%%%% slides %%%%%%%%
+\section{Introduction} 
+\input{files/introduction.tex}
+
+\section{Justificativa}
+\input{files/justificativa.tex}
+
+\section{Objetivos}
+\input{files/objetivos.tex}
+
+\section{Fundamentação Teórica}
+\input{files/fundamentacao.tex}
+
+\section{Metodologia}
+\input{files/metodologia.tex}
+
+\section{Resultados}
+\input{files/resultados.tex}
+
+\section{Conclusão}
+\input{files/conclusao.tex}
+
+%%%%%%%% agradecimentos %%%%%%%%
+\begin{frame}{Agradecimentos}
+    \large{Agradeço a fulano, ciclano e beltrano que apoiaram o desenvolvimento dessa pesquisa.}
+\end{frame}
+%------------------------------------------------
+
+
+%------------------------------------------------
+%------------------------------------------------
+%%%%%%%% referencias %%%%%%%%
+\nocite{*}
+\begin{frame}[allowframebreaks]{Referências}
+\bibliographystyle{unsrt}
+\bibliography{ref.bib}
+\end{frame}
+
+
+%%%%%%%% repete primeiro slide %%%%%%%%
+\begin{frame}
+\titlepage 
+\end{frame}
+
+
+\end{document}
