@@ -1,0 +1,108 @@
+\begin{frame}[t]{Randomized Perfect Matching}
+	How to check if a bipartite graph admits a perfect matching?\\
+
+\begin{tabular}{cl}  
+\begin{tabular}{c}
+\only<1-2>
+{
+    \includegraphics[width=0.15\linewidth]{img/random/randombip-orig.eps}
+}
+\only<3->
+{
+    \includegraphics[width=0.15\linewidth]{img/random/randombip-matched.eps}
+}
+\end{tabular}
+& \begin{tabular}{l}
+\parbox{0.7\linewidth}{%  change the parbox width as appropiate
+	\only<2-3>
+	{
+	\[
+	A^G=
+	\begin{bmatrix}
+	1 & 1 & 0 \\
+	0 & 1 & 1 \\
+	1 & 0 & 0 
+	\end{bmatrix}
+	\]
+	}
+	\only<4->
+	{
+	\[
+	A^G=
+	\begin{bmatrix}
+	1 & \textcolor{red}{1} & 0 \\
+	0 & 1 & \textcolor{red}{1} \\
+	\textcolor{red}{1} & 0 & 0 
+	\end{bmatrix}
+	\]
+	}
+
+\only<5->
+{
+	\begin{center}
+	\begin{tabular}{|l|*{3}{c}|r}
+		\hline
+		$u_i$ & 1 &  2 & 3  \\
+		\hline
+		$\pi(u_i)$ & 2 &  3 & 1  \\
+		\hline
+	\end{tabular}
+	\end{center}
+}
+}
+\\
+\end{tabular}
+\end{tabular}
+\only<6->
+{
+	The graph admits a perfect matching $\iff$\\
+}
+\only<7->
+{
+there is a permutation $\pi$, s.t. $A^G(i, \pi(i)) = 1$ for all $i \in [n]$ $\iff$\\
+}
+\only<8>
+{
+For $\mathcal{S}$ the set of all permutations on $n$ elements
+\[
+	\sum\limits_{\pi \in \mathcal{S} } \prod\limits_{i \in [n]} A^G_{i, \pi(i)} > 0
+\]
+}
+\only<9->
+{
+For $\mathcal{S}$ the set of all permutations on $n$ elements
+\[
+	\underbrace{\sum\limits_{\pi \in \mathcal{S} } \prod\limits_{i \in [n]} A^G_{i, \pi(i)}}_{perm(A^G)} > 0
+\]
+}
+\end{frame}
+
+\begin{frame}[t]{Permanent and Determinant}
+	\begin{align*}
+		perm(A) = & \sum\limits_{\pi \in \mathcal{S}} \prod\limits_{i\in[n]} A_{i, \pi(i)} & \uncover<2->{\dots\text{is a known hard problem}}\\
+		\uncover<3->{det(A) = & \sum\limits_{\pi \in \mathcal{S}} sign(\pi) \prod\limits_{i\in[n]} A_{i, \pi(i)} & }
+	\end{align*}
+
+	\uncover<4->{We don't have to bound ourselves with ones in the matrix..\\}
+	\uncover<5->{
+	\begin{tabular}{cl}  
+	\begin{tabular}{c}
+    	\includegraphics[width=0.15\linewidth]{img/random/randombip-orig.eps}
+	\end{tabular}
+	\begin{tabular}{l}
+	\parbox{0.7\linewidth}{%  change the parbox width as appropiate
+	\[
+	A'^G=
+	\begin{bmatrix}
+		x_{11} & x_{12} & 0 \\
+		0 & x_{22} & x_{23} \\
+		x_{31} & 0 & 0 
+	\end{bmatrix}
+	\]
+	}
+	\end{tabular}
+	\end{tabular}
+	}
+	\uncover<6->{$det(A'^G)$ is a polynomial of degree $n$.\\}
+	\uncover<7->{The graph admits a perfect matching $\iff$ the polynomial $det(A'^G)$ is non-zero.}
+\end{frame}
