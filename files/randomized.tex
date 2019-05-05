@@ -104,5 +104,21 @@ For $\mathcal{S}$ the set of all permutations on $n$ elements
 	\end{tabular}
 	}
 	\uncover<6->{$det(A'^G)$ is a polynomial of degree $n$.\\}
-	\uncover<7->{The graph admits a perfect matching $\iff$ the polynomial $det(A'^G)$ is non-zero.}
+	\uncover<7->{The graph admits a perfect matching $\iff$ the polynomial $det(A'^G)$ is not identical zero.}
+\end{frame}
+
+\begin{frame}[t]{Schwartz-Zippel lemma} 
+	\begin{block}{Shwartz-Zippel lemma}
+		Let $\rho$ be a non-zero polynomial of $n$ variables and degree $d$ over a field $\mathbb{F}$.\\
+		Let $\mathcal{S} \subseteq \mathbb{F}^n$, then for $x_0 \underset{u.a.r}{\in} \mathcal{S}$
+		$$Pr[\rho(x_0) = 0] \leq \frac{d}{|\mathcal{S}|}$$
+	\end{block}
+	\only<2->
+	{
+	Choosing $|\mathcal{S}| = 2d$, we get a method that tells with probability at least $1/2$, if the polynomial is identical zero.\\
+	}
+	\only<3->
+	{
+	Since one non-zero answer is enough to know the polynomial is a non-zero, we can repeat the operation a couple of times magnifying the probability.\\
+	}
 \end{frame}
