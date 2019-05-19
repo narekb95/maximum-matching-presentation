@@ -1,3 +1,63 @@
+\begin{frame}{}
+	\centering \textbf{\huge A short review..}
+\end{frame}
+
+\begin{frame}{Maximum Matching vs Maximal Matching}
+	\parbox[c][.7\textheight][c]{\textwidth}{%
+\only<1>
+{
+	\begin{center}
+    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-0.eps}
+	\end{center}
+}
+\only<2>
+{
+	\begin{center}
+    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-1.eps}
+	\end{center}
+}
+\only<3->
+{
+	\begin{center}
+    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-2.eps}
+	\end{center}
+}
+\uncover<4>
+{
+	\begin{center}
+    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-3.eps}
+	\end{center}
+}
+}
+\end{frame}
+
+\begin{frame}[t]{Determinant and Permanent}
+	A short trip in mathematics,\\
+	\textbf{Permutation} - Bijection over $n$ elements.\\
+	$\mathcal{S}_n$ - Set of all permutatoins of $n$ elements.\\~\\
+	For an $n\times n$-matrix $A$, we define
+
+\begin{columns}[T] % align columns\end{column}%
+\begin{column}{.48\textwidth}
+	{\centering \textbf{Determinant of a matrix}\\}
+$$det(A) =  \sum\limits_{\pi \in \mathcal{S}} sign(\pi) \prod\limits_{i\in[n]} A_{i, \pi(i)}$$
+	laplace expansion (on board).\\
+	Efficient Gaussian Eliminatin.\\
+	$O(n^\omega), \omega = 2.373$.\\
+	Matrix-Multiplication Exponent.\\
+
+\end{column}
+\hfill%
+\begin{column}{.48\textwidth}
+	{\centering \textbf{Permanent of a matrix}\\}
+$$perm(A) =  \sum\limits_{\pi \in \mathcal{S}}  \prod\limits_{i\in[n]} A_{i, \pi(i)}$$
+	\textbf{NP-Hard} problem.\\
+	Presumably no polynomial time algorithm to compute.\\
+
+\end{column}
+\end{columns}
+\end{frame}
+
 \begin{frame}[t]{Randomized Perfect Matching}
 	How to check if a bipartite graph admits a perfect matching?\\
 
@@ -37,7 +97,7 @@
 	\]
 	}
 
-\only<5->
+\uncover<5->
 {
 	\begin{center}
 	\begin{tabular}{|l|*{3}{c}|r}
