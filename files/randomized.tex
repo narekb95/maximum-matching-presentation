@@ -32,29 +32,53 @@
 \end{frame}
 
 \begin{frame}[t]{Determinant and Permanent}
-	A short trip in mathematics,\\
-	\textbf{Permutation} - Bijection over $n$ elements.\\
-	$\mathcal{S}_n$ - Set of all permutatoins of $n$ elements.\\~\\
-	For an $n\times n$-matrix $A$, we define
+	\uncover<2->{
+	A short tour in number theory,\\
+	}
+	\uncover<3->{
+		\textbf{Permutation} } \uncover<4->{ - Bijection over $n$ elements to them selves.}\\
+	\only<5>{
+\begin{tabular}{ |c|c|c|c|c|c| } 
+ \hline
+	$i$ & 1 & 2 & 3 & 4 & 5 \\ 
+\hline
+	$\delta (i)$ & 3 & 2 & 4 & 1 & 5\\ 
+ \hline
+\end{tabular}
+		}
 
+	\uncover<6->{	
+	$\mathcal{S}_n$ - Set of all permutatoins of $n$ elements.\\~\\
+	}
+	\uncover<7->{
+	For an $n\times n$-matrix $A$, we define
+	}
 \begin{columns}[T] % align columns\end{column}%
+	\uncover<8->{
 \begin{column}{.48\textwidth}
 	{\centering \textbf{Determinant of a matrix}\\}
 $$det(A) =  \sum\limits_{\pi \in \mathcal{S}} sign(\pi) \prod\limits_{i\in[n]} A_{i, \pi(i)}$$
+	\uncover<10->{
 	laplace expansion (on board).\\
 	Efficient Gaussian Eliminatin.\\
 	$O(n^\omega), \omega = 2.373$.\\
 	Matrix-Multiplication Exponent.\\
+	}
 
 \end{column}
+}
 \hfill%
+	\uncover<9->{
 \begin{column}{.48\textwidth}
-	{\centering \textbf{Permanent of a matrix}\\}
+	{\centering \textbf{Permanent of a matrix}\\~\\}
 $$perm(A) =  \sum\limits_{\pi \in \mathcal{S}}  \prod\limits_{i\in[n]} A_{i, \pi(i)}$$
+	\uncover<11->{
 	\textbf{NP-Hard} problem.\\
 	Presumably no polynomial time algorithm to compute.\\
+	}
 
 \end{column}
+}
 \end{columns}
 \end{frame}
 
