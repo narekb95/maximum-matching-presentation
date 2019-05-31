@@ -4,30 +4,26 @@
 
 \begin{frame}{Maximum Matching vs Maximal Matching}
 	\parbox[c][.7\textheight][c]{\textwidth}{%
-\only<1>
-{
-	\begin{center}
-    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-0.eps}
-	\end{center}
-}
-\only<2>
-{
-	\begin{center}
-    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-1.eps}
-	\end{center}
-}
-\only<3->
-{
-	\begin{center}
-    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-2.eps}
-	\end{center}
-}
-\uncover<4>
-{
-	\begin{center}
-    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-3.eps}
-	\end{center}
-}
+	\only<1>{
+		\begin{center}
+	    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-0.eps}
+		\end{center}
+	}
+	\only<2>{
+		\begin{center}
+	    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-1.eps}
+		\end{center}
+	}
+	\only<3->{
+		\begin{center}
+	    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-2.eps}
+		\end{center}
+	}
+	\uncover<4>{
+		\begin{center}
+	    \includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-3.eps}
+		\end{center}
+	}
 }
 \end{frame}
 
@@ -36,7 +32,8 @@
 	A short tour in number theory,\\
 	}
 	\uncover<3->{
-		\textbf{Permutation} } \uncover<4->{ - Bijection over $n$ elements to them selves.}\\
+		\textbf{Permutation}} 
+	\uncover<4->{- Bijection over $n$ elements to themselves.}\\
 	\only<5>{
 \begin{tabular}{ |c|c|c|c|c|c| } 
  \hline
@@ -48,7 +45,7 @@
 		}
 
 	\uncover<6->{	
-	$\mathcal{S}_n$ - Set of all permutatoins of $n$ elements.\\~\\
+	$\mathcal{S}_n$ - Set of all permutations of $n$ elements.\\~\\
 	}
 	\uncover<7->{
 	For an $n\times n$-matrix $A$, we define
@@ -60,7 +57,7 @@
 $$det(A) =  \sum\limits_{\pi \in \mathcal{S}} sign(\pi) \prod\limits_{i\in[n]} A_{i, \pi(i)}$$
 	\uncover<10->{
 	laplace expansion (on board).\\
-	Efficient Gaussian Eliminatin.\\
+	Efficient Gaussian Elimination.\\
 	$O(n^\omega), \omega = 2.373$.\\
 	Matrix-Multiplication Exponent.\\
 	}
