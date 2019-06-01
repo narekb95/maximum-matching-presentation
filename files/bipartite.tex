@@ -1,41 +1,26 @@
 \begin{frame}{Hall's Theorem}
-A bipartite graph G consisting of sets U and W, has a matching satisfying $|u|$ if and only if $|N(x)| \geq |x|$ for every nonempty subset X of U.
-  
+\only<1>{
+\begin{figure}
+\end{figure}
+}
+\begin{block}{Definition}
+    \only<1>{A bipartite graph G consisting of sets U and W, has a matching satisfying $|u|$ if and only if $|N(x)| \geq |x|$ for every nonempty subset X of U.}
+\end{block} 
 \end{frame}
 
-\begin{frame}{Example 1 - Hall's Theorem}
-Does G have a matching of size 5?
--- Example on the Board -- 
-\end{frame}
+\begin{frame}{Examples - Hall's Theorem}
+- Examples on the board --
 
-\begin{frame}{Solution 1 - Hall's Theorem}
-No, because: Let $X = {B,C}$. $N(x) = {3}$. $|N(x)| = 1$, $|x| = 2$. Violates Hall’s Condition.
-  
-\end{frame}
-
-\begin{frame}{Example 2 - Hall's Theorem}
-Does G have a matching of size 5?
- -- Example on the Board -- 
-\end{frame}
-
-\begin{frame}{Solution 2 - Hall's Theorem}
-No, because: Let $X = {B,C,D}$. $N(x) = {1,3}$. $|N(x)| = 2$, $|x| = 3$. Violates Hall’s Condition.
-  
-\end{frame}
-
-\begin{frame}{Example 3 - Hall's Theorem}
-Does G have a matching of size 4?
--- Example on the Board -- 
-\end{frame}
-
-\begin{frame}{Solution 3 - Hall's Theorem}
-Yes. ${C4, D3, A2, B1}$. 
-  
 \end{frame}
   
 \begin{frame}{Königs Theorem}
-The maximum matching for a bipartite graph equals its minimum vertex cover
-  
+\only<1>{
+\begin{figure}
+\end{figure}
+}
+\begin{block}{Definition}
+    \only<1>{The maximum matching for a bipartite graph equals its minimum vertex cover}
+\end{block} 
 \end{frame}
 
 \begin{frame}{Königs Theorem - Example}
@@ -44,79 +29,94 @@ The maximum matching for a bipartite graph equals its minimum vertex cover
 \end{frame}
 
 \begin{frame}{Alternating Path}
-Let $G = (X, Y, E)$ be a bi-partite graph where the vertices are divided into the sets X and Y and E the edges.
+\centering
+\includegraphics[width=.4\linewidth]{img/bipartite/alternating1.png}
+\only<1>{
+\begin{figure}
+\end{figure}
+}
+\begin{block}{Definition}
+    \only<1>{Let $G = (X, Y, E)$ be a bi-partite graph where the vertices are divided into the sets X and Y and E the edges.}
+\end{block} 
+\end{frame}
+
+\begin{frame}{Alternating Path}
+\includegraphics[width=.8
+\linewidth]{img/bipartite/alternating2.png}
   
 \end{frame}
 
 \begin{frame}{Alternating Path}
--Picture-
-  
-\end{frame}
-
-\begin{frame}{Alternating Path}
--Picture-
+\includegraphics[width=.8\linewidth]{img/bipartite/alternating3.png}
   
 \end{frame}
 
 \begin{frame}{Alternating Path - Summary}
-- An alternating path will start in a vertex element of X and ends in vertex element of Y
-- An alternating path must have an odd-number of edges
-- An alternating path will visit nodes in X und Y alternatedly
-
--> To go forward, use an edge that is not part of the matching
--> To go backward, use an edge that is part of the matching
+- starts in a vertex element of X and ends in vertex element of Y\newline
+- must have an odd-number of edges\newline
+- will visit nodes in X und Y alternatedly\newline
+- And it starts and ends in free/unmatched vertices\newline
+\newline
+$\rightarrow$ To go forward, use an edge that is not part of the matching\newline
+$\rightarrow$ To go backward, use an edge that is part of the matching\newline
   
 \end{frame}
 
 \begin{frame}{Augmenting Path - Definition}
-Given a matching M, an alternating path is a path where edges are alternately in M and not in M. An augmenting path is an alternating path where the first and last vertex are unmatched.
-  
+\only<1>{
+\begin{figure}
+\end{figure}
+}
+\begin{block}{Definition}
+    \only<1>{An augmenting path is an alternating path where the first and last vertex are unmatched.}
+\end{block} 
 \end{frame}
 
 \begin{frame}{Augmenting Path - example}
--on the board-
+-- Example on the Board --
   
 \end{frame}
 
 \begin{frame}{Breadth First Search - repetition}
--on the board-
+-- Example on the Board --
   
 \end{frame}
 
 \begin{frame}{Berge Theorem}
-A matching is a maximum matching iff it contains no augmenting path.
+A matching is a maximum matching if it contains no augmenting path.
   
 \end{frame}
 
 \begin{frame}{Hungarian Method}
-we search augmenting paths in the graph until no augmenting path can be found. Using Berge Lemma, our matching is Maximum
+Search augmenting paths in the graph until no augmenting path can be found\newline
+\newline
+$\rightarrow$ \textbf {Time complexity: $O(|V|^3)$}\newline
+\newline
+Precise information can be found here: \textbf {https://brilliant.org/wiki/hungarian-matching/}\newline
+\newline
+\textbf {Note}: It is not an algorithm, so it does not specify a implementation
 \end{frame}
 
 \begin{frame}{Maximum Flow Reduction}
--on the board-
+-- Example on the Board --
   
 \end{frame}
 
 \begin{frame}{Hopcraft-Carp Algorithm}
-Initialize Matching Empty 
-Repeat
-	Build alternating level graph rooted at unmatched vertices in L using bfs.
-	Augment M via maximal set of vertex disjoint shortest-length paths
-	until no augmenting paths exists
-	Return M
+Input: \textbf{A bipartite Graph}
+Initialize Matching\newline
+1. Repeat\newline
+$\rightarrow$ Build alternating level graph rooted at unmatched vertices using bfs\newline
+$\rightarrow$ Augment M via maximal set of vertex disjoint shortest-length paths\newline
+$\rightarrow$ until no augmenting paths exists\newline
+2. Return M\newline
 		
-Time complexity: O(|E|)
+\textbf {Time complexity: $O(|E|*\sqrt{|V|})$}
   
 \end{frame}
 
 \begin{frame}{Hopcraft-Carp Algorithm - bipartite Graph}
 
--example on the board-
-  
-\end{frame}
-
-\begin{frame}{Hopcraft-Carp Algorithm - non-bipartite Graph}
-
--example on the board-
+-- Example on the Board --
   
 \end{frame}
