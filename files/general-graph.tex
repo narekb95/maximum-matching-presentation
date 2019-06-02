@@ -42,45 +42,67 @@
 	}
 \end{frame}
 
-\begin{frame}[t]{Edmonds' Blossom algorithm (1961)}
+\begin{frame}[t]{Edmonds' Blossom algorithm (1965)}
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{img/general/Edmonds_augmenting_path.png}
 	\end{center}
 \end{frame}
 
-\begin{frame}[t]{Edmonds' Blossom algorithm (1961)}
+\begin{frame}[t]{Edmonds' Blossom algorithm (1965)}
 	\only<1->{
 		\textbf{Problem:} How to guarantee no augmenting paths in a graph?
 	}
 
 	\only<2->{
 		\vspace{1em}
-		\textbf{Schema:} 
+		\begin{block}{Definition: Exposed vertex}
+		{Vertex $v$ is exposed iff no edge of $M$ is incident with $v$.}
+		\end{block} 
+	
+} 
+	\only<3->{	
+		\vspace{1em}
+		Blossom algorithm examines all exposed vertices $v$ and 
 		\begin{itemize}
-			\item shrink the graph in a way, that preserves augmenting paths
-			\item extend matching when possible
-			\item return, when no augmenting path found
+			\item if an augmenting path is found, improve matching
+			\item if an odd cycle ("blossom") is found, temporarily remove cycle and execute algorithm on a modified graph
+			\item (delete vertex $v$ from exposed vertices)
 		\end{itemize}
 	}
 \end{frame}
 
-\begin{frame}[t]{Edmonds' Blossom algorithm (1961)}
-	\textbf{Blossom handling:}
+\begin{frame}[t]{Edmonds' Blossom algorithm (1965)}
+	\textbf{Blossom contraction}
 	
-	[TODO: include image]
+	\begin{center}
+	\includegraphics[width=0.7\linewidth]{img/general/Edmonds_blossom_contraction.png}
+	\end{center}
 \end{frame}
 
-\begin{frame}[t]{Edmonds' Blossom algorithm (1961)}
-	\textbf{Example:}
+\begin{frame}[t]{Edmonds' Blossom algorithm (1965)}
+	\textbf{Blossom lift}
 	
-	[TODO: include images]
+	\begin{center}
+		\includegraphics[width=0.75\linewidth]{img/general/Edmonds_blossom_lift.png}
+	\end{center}
 \end{frame}
 
-\begin{frame}[t]{Edmonds' Blossom algorithm (1961)}
-	\textbf{Pseudocode:}\\
-	[TODO: include pseudocode]
+\begin{frame}[t]{Edmonds' Blossom algorithm (1965)}
+	\textbf{Blossom lift (other variant)}
 	
-	\vspace{1em}
-	\textbf{Complexity:} [TODO: include complexity]
+	\begin{center}
+		\includegraphics[width=0.75\linewidth]{img/general/Edmonds_blossom_lift2.png}
+	\end{center}
+\end{frame}
 
+\begin{frame}[t]{General graphs}	
+	\textbf{Complexity:} 
+	For general graphs a straightforward implementation of the maximum matching algorithm of Edmonds (1965) runs in $O(n^4)$ time (Papadimitriou and Steiglitz, 1982). More efficient 	general matching algorithms have been designed with the following running times:
+	\begin{itemize}	
+		\item $O(n^3)$ - Gabow, 1976,
+		\item $O(n * m)$ - Kameda and Munro, 1974,
+		\item $O(n^{2,5)}$ - Even and Kariv, 1975,
+		\item $O(n^{l/2}*m)$ - Micali and Vazirani, 1980
+	\end{itemize}
+	
 \end{frame}
