@@ -1,5 +1,5 @@
 \begin{frame}{}
-	\centering \textbf{\huge A short review..}
+	\centering \textbf{\huge Randomized Algorithms}
 \end{frame}
 
 
@@ -29,14 +29,15 @@
 \begin{columns}[T] % align columns\end{column}%
 	\uncover<8->{
 \begin{column}{.48\textwidth}
-	{\centering \textbf{Determinant of a matrix}\\}
-$$det(A) =  \sum\limits_{\pi \in \mathcal{S}} sign(\pi) \prod\limits_{i\in[n]} A_{i, \pi(i)}$$
-	\uncover<10->{
-	laplace expansion (on board).\\
-	Efficient Gaussian Elimination.\\
-	$O(n^\omega), \omega = 2.373$.\\
-	Matrix-Multiplication Exponent.\\
+	{\centering \textbf{Determinant of a matrix}\\
+	
+	$$det(A) =  \sum\limits_{\pi \in \mathcal{S}} sign(\pi) \prod\limits_{i\in[n]} A_{i, \pi(i)}$$
 	}
+	\uncover<10->{Laplace expansion (on board)\\
+	Efficient Gaussian Elimination\\
+	$O(n^\omega), \omega = 2.373$\\
+	Matrix-Multiplication Exponent\\
+}
 
 \end{column}
 }
@@ -165,7 +166,7 @@ For $\mathcal{S}$ the set of all permutations on $n$ elements
 \end{frame}
 
 \begin{frame}[t]{Schwartz-Zippel lemma} 
-	\begin{block}{Shwartz-Zippel lemma}
+	\begin{block}{Schwartz-Zippel lemma}
 		Let $\rho$ be a non-zero polynomial of $n$ variables and degree $d$ over a field $\mathbb{F}$.\\
 		Let $\mathcal{S} \subseteq \mathbb{F}^n$, then for $x_0 \underset{u.a.r}{\in} \mathcal{S}$
 		$$Pr[\rho(x_0) = 0] \leq \frac{d}{|\mathcal{S}|}$$
