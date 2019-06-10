@@ -5,87 +5,71 @@
 \end{figure}
 \end{frame}
 
-\begin{frame}{Definitions}
-    \begin{itemize}[<+->]
-    \item Matching
-    \item \textbf{Perfect} Matching
-    \item \textbf{Bipartite} Matching
-    \item \textbf{Maximum} Matching
-    \end{itemize}
-  
-  %add different figure for perfect matching and bipartite matching  
-\only<1>{
-	\begin{figure}
-	\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=.4\linewidth]{img/introduction/graph01.eps}	
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=.4\linewidth]{img/introduction/graph02.eps}
-	\end{subfigure}
-	\end{figure}
-}
-\only<2>{
-	\begin{figure}
-	    \centering
-	    \includegraphics[width=0.3\linewidth]{img/introduction/perfectmatching.eps}
-	\end{figure}
-}
-\only<3>{
-	\begin{figure}
-	\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=.4\linewidth]{img/introduction/bipar.eps}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=.4\linewidth]{img/introduction/biparmatch.eps}
-	\end{subfigure}
-	\end{figure}
-}
-\only<4>{
-	\begin{figure}
-	\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=.4\linewidth]{img/introduction/maximalmatch.eps}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=.4\linewidth]{img/introduction/maximummatching.eps}
-	\end{subfigure}
-	\end{figure}
-}
-    
-\begin{block}{Definition}
-    \only<1>{A set of non overlapping edges.}
-    \only<2>{Matching of size $\frac{|V\left(G\right)|}{2}$}
-    \only<3>{Matching on a bipartite graph.}
-    \only<4>{Matching of the maximum size.}
-\end{block} 
+\begin{frame}
+	\centering \textbf{\huge Definitions}
 \end{frame}
 
-\begin{frame}{Maximum Matching vs Maximal Matching}
-	\parbox[c][.7\textheight][c]{\textwidth}{%
-		\only<1>{
-			\begin{center}
-				\includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-0.eps}
-			\end{center}
-		}
-		\only<2>{
-			\begin{center}
-				\includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-1.eps}
-			\end{center}
-		}
-		\only<3->{
-			\begin{center}
-				\includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-2.eps}
-			\end{center}
-		}
-		\uncover<4>{
-			\begin{center}
-				\includegraphics[width=0.15\linewidth]{img/random/maximum-maximal-3.eps}
-			\end{center}
-		}
-	}
+
+\begin{frame}[t]{Matching}
+  \begin{block}{Definition}
+    Set of non overlapping edges.
+  \end{block} 
+
+  \vspace{1em}
+  \begin{figure}
+    \centering
+    \includegraphics[width=.25\linewidth]{img/introduction/graph01.eps}
+    \hspace{2em}	
+    \includegraphics[width=.25\linewidth]{img/introduction/graph02.eps}
+  \end{figure}	
+\end{frame}
+
+\begin{frame}[t]{Bipartite Matching}
+  \begin{block}{Definition}
+  	Matching on a bipartite graph.
+  \end{block} 
+	
+  \vspace{1em}
+  \begin{figure}
+	\centering
+	\includegraphics[width=.25\linewidth]{img/introduction/bipar.eps}
+	\hspace{3em}	
+	\includegraphics[width=.25\linewidth]{img/introduction/biparmatch.eps}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{Perfect Matching}
+	\begin{block}{Definition}
+	  Matching of size $\frac{|V\left(G\right)|}{2}$.
+	\end{block} 
+	
+	\vspace{1em}
+	\begin{figure}
+	  \centering
+	  \includegraphics[width=0.3\linewidth]{img/introduction/perfectmatching.eps}
+	\end{figure}	
+\end{frame}
+
+\begin{frame}[t]{Maximum Matching}
+	\begin{block}{Definition}
+      Matching of the maximum size.
+	\end{block} 
+	
+	\vspace{1em}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.3\linewidth]{img/introduction/perfectmatching.eps}
+	\end{figure}	
+\end{frame}
+
+\begin{frame}[t]{Maximum Matching vs Maximal Matching}
+	Maximum: matching of the maximum size:
+	\begin{center}
+		\includegraphics[width=0.35\linewidth]{img/introduction/maximummatching.eps}
+	\end{center}
+
+	Maximal: no more edges can be added:
+	\begin{center}
+  	\includegraphics[width=0.35\linewidth]{img/introduction/maximalmatch.eps}
+	\end{center}
 \end{frame}

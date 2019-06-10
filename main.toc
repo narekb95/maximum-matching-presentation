@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Matching algorithms}{9}{0}{2}
+\beamer@sectionintoc {3}{Randomized Algorithm for matching}{40}{0}{3}
