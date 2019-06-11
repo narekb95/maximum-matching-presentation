@@ -32,30 +32,29 @@
   
 \end{frame}
 
-\begin{frame}{Alternating Path}
+\begin{frame}{Alternating/Augmenting Path}
 \centering
-\includegraphics[width=.4\linewidth]{img/bipartite/alternating1.png}
+\includegraphics[width=.8\linewidth]{img/bipartite/alternating1.png}
 \only<1>{
 \begin{figure}
 \end{figure}
 }
-\begin{block}{Definition}
-    \only<1>{Let $G = (X, Y, E)$ be a bipartite graph where the vertices are divided into the sets X and Y and E the edges.}
-\end{block} 
 \end{frame}
 
-\begin{frame}{Alternating Path}
+\begin{frame}{Alternating/Augmenting Path}
+\centering
 \includegraphics[width=.8
 \linewidth]{img/bipartite/alternating2.png}
   
 \end{frame}
 
-\begin{frame}{Alternating Path}
+\begin{frame}{Alternating/Augmenting Path}
+\centering
 \includegraphics[width=.8\linewidth]{img/bipartite/alternating3.png}
   
 \end{frame}
 
-\begin{frame}{Alternating Path - Summary}
+\begin{frame}{Augmenting Path - Summary}
 - starts in a vertex element of X and ends in vertex element of Y\newline
 - must have an odd-number of edges\newline
 - will visit nodes in X and Y alternately\newline
@@ -64,16 +63,6 @@
 $\rightarrow$ To go forward, use an edge that is not part of the matching\newline
 $\rightarrow$ To go backward, use an edge that is part of the matching\newline
   
-\end{frame}
-
-\begin{frame}{Augmenting Path - Definition}
-\only<1>{
-\begin{figure}
-\end{figure}
-}
-\begin{block}{Definition}
-    \only<1>{An augmenting path is an alternating path where the first and last vertex are unmatched.}
-\end{block} 
 \end{frame}
 
 \begin{frame}{Augmenting Path - example}
@@ -87,7 +76,9 @@ $\rightarrow$ To go backward, use an edge that is part of the matching\newline
 \end{frame}
 
 \begin{frame}{Berge's Theorem}
-A matching is a maximum matching if it contains no augmenting path.
+\begin{block}{Definition}
+    \only<1>{A matching is a maximum matching if it contains no augmenting path.}
+\end{block} 
   
 \end{frame}
 
